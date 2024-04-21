@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "2d904001-7a1a-425c-a34f-f15e00ab2d04",
+		"name": "divine ray blockchain service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5149371"
+	},
+	"item": [
+		{
+			"name": "issue rewards",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"users\": [\"user1@example.com\", \"user2@example.com\"],\n    \"amounts\": [10000, 2000000]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{server_ip}}:{{server_port}}/rewards/issue",
+					"protocol": "http",
+					"host": [
+						"{{server_ip}}"
+					],
+					"port": "{{server_port}}",
+					"path": [
+						"rewards",
+						"issue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create nft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": \"user1@example.com\",\n    \"fee\": 200000,\n    \"id\": \"id-of-the-neft\",\n    \"additional_data\": \"string containing encoded additional data or hash of the data (optional)\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{server_ip}}:{{server_port}}/nft/create",
+					"protocol": "http",
+					"host": [
+						"{{server_ip}}"
+					],
+					"port": "{{server_port}}",
+					"path": [
+						"nft",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer nft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"buyer\": \"user1@example.com\",\n    \"fee\": 200000,\n    \"id\": \"id-of-the-neft\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{server_ip}}:{{server_port}}/nft/transfer",
+					"protocol": "http",
+					"host": [
+						"{{server_ip}}"
+					],
+					"port": "{{server_port}}",
+					"path": [
+						"nft",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
